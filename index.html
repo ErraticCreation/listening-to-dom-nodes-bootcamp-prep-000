@@ -37,5 +37,31 @@
         </div>
       </div>
     </div>
+
+    <script>
+      // Create const variable of "main" id element nodeList
+      const main = document.getElementById('main');
+
+      // Create alert when "main" is clicked
+      main.addEventListener('click', function(event) {
+        alert('I was clicked!');
+      });
+
+      // Create const variable of input nodeList
+      const input = document.querySelector('input');
+
+      // log all keypresses
+      input.addEventListener('keydown', function(e) {
+        console.log(e.which);
+      });
+
+      // Disable backspace
+      input.addEventListener('keydown', function(e) {
+        if (e.which === 8) {
+          return e.preventDefault();
+        }
+      });
+
+    </script>
   </body>
 </html>
